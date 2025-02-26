@@ -1,5 +1,3 @@
-package assignment_calculator;
-
 public class Calculator {
 
     // 기능1: 더하기 메서드(기능)

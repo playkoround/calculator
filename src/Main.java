@@ -1,5 +1,3 @@
-package assignment_calculator;
-
 public class Main {
     public static void main(String[] args) {
         // calculator 객체화
