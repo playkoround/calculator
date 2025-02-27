@@ -13,15 +13,15 @@ public class Calculator {
 
 
     // 3. 기능(메서드)
-    add;
-    subtraction;
-    multiply;
-    divide;
-    
+//    add;
+//    subtraction;
+//    multiply;
+//    divide;
+//
     // 3-1. 더하기 메서드(기능)
     double sum(double num1, double num2) {
         System.out.println("num1 + num2 = " + (num1 + num2));
-        return result = num1 + num2;
+        return num1 + num2;
     }
 
 
