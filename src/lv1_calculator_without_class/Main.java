@@ -11,7 +11,7 @@ public class Main {
         // First number
         System.out.print("Type 1st integer number: ");
         int firstNumber = scanner.nextInt();
-
+        scanner.nextLine(); // 엔터(\n) 제거
 
         // Operator
         System.out.println( "Your 1st number is " + firstNumber + ".\nType your operator(+, -, /, *) with double quotes: ");
