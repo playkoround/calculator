@@ -6,20 +6,20 @@ import java.util.Scanner;
 
 public class Main {
     public static void main (String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
         // First number
         System.out.print("Type 1st integer number: ");
-        Scanner firstScanner = new Scanner(System.in);
-        int firstNumber = firstScanner.nextInt();
-        System.out.println( "Your 1st number is " + firstNumber + ".\nType your operator(+, -, /, *) with double quotes: ");
+        int firstNumber = scanner.nextInt();
+
 
         // Operator
-        Scanner operatorScanner = new Scanner(System.in);
-        String operator = operatorScanner.nextLine();
-        System.out.println("Your operator is " + operator + ".\nType 2nd integer number: ");
+        System.out.println( "Your 1st number is " + firstNumber + ".\nType your operator(+, -, /, *) with double quotes: ");
+        String operator = scanner.nextLine();
 
         // Second number
-        Scanner secondScanner = new Scanner(System.in);
-        int secondNumber = secondScanner.nextInt();
+        System.out.println("Your operator is " + operator + ".\nType 2nd integer number: ");
+        int secondNumber = scanner.nextInt();
         System.out.println( "Your 2nd number is " + secondNumber + ".");
 
         // Calculation
@@ -46,7 +46,7 @@ public class Main {
                 System.out.println("You typed something wrong.");
                 return;
         }
-        System.out.println("You typed" + firstNumber + operator + secondNumber + ". The result is " + result + ".");
+        System.out.println("You typed: " + firstNumber + " " + operator + " " + secondNumber + ". The result is " + result + ".");
     }
 
 }
