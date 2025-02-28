@@ -36,9 +36,9 @@ public class Main {
 
             case "/":
                 //반복문 쓰면 0 안넣을때까지 반복됨 > 가성비를 위해 위치생각해야함(효율성을 위하여)
-                if (secondNumber == 0) {
-                    System.out.println("Division by zero is not allowed.");
-                    return;
+                while (secondNumber == 0) {
+                    System.out.println("Division by zero is not allowed. Please type again.\nType 2nd integer number:");
+                    secondNumber = scanner.nextInt();
                 }
                 result = firstNumber / secondNumber;
                 break;
