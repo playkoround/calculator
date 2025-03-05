@@ -47,11 +47,26 @@ public class Main {
             System.out.println("You typed: " + num1 + " " + operator + " " + num2 + ". The result is " + result + ".");
 
 
+            // Saving the result
+            System.out.println("The result so far is " + calculator.getResults());
+
+            // Removing the result
+            System.out.print("Type 'remove' to delete the oldest record, type anything to keep running: ");
+            String command = scanner.next();
+            scanner.nextLine(); // 엔터(\n) 공백 제거
+            if (command.equals("remove")) {
+                calculator.removeResult();
+                System.out.println("The result is deleted. The result so far is: " + calculator.getResults());
+            }
+
             // Ask if it is finished
             System.out.print("Type 'exit' to quit, type anything to keep running: ");
-            scanner.nextLine();
             isFinished = scanner.nextLine().equals("exit");
 
         }
+
+        scanner.close();
     }
-}
+
+        }
+
