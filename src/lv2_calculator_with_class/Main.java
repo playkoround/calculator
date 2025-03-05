@@ -18,10 +18,10 @@ public class Main {
             // Operator
             System.out.println("Your 1st number is " + num1 + ".\nType your operator(+, -, /, *): ");
             String operator = scanner.next();
-            boolean isValid = false;
-            while(!isValid) {
+            boolean isOperatorValid = false;
+            while(!isOperatorValid) {
                 if (operator.equals("+") || operator.equals("-") || operator.equals("/") || operator.equals("*")) {
-                isValid = true;
+                isOperatorValid = true;
                 } else {
                     System.out.println("Invalid operator. Please enter one of +, -, /, *.");
                     operator = scanner.next();
@@ -30,10 +30,15 @@ public class Main {
             // Second number
             System.out.println("Your operator is " + operator + ".\nType 2nd integer number: ");
             int num2 = scanner.nextInt();
-            if (operator.equals("/") && num2 == 0) {
-                System.out.println("Division by zero is not allowed. Please type again.\nType 2nd integer number:");
-            } else {
-                num2 = scanner.nextInt();
+            boolean isSecondNumberValid = false;
+            while(!isSecondNumberValid) {
+                if (operator.equals("/") && num2 == 0) {
+                    System.out.println("Division by zero is not allowed. Please type again.\nType 2nd integer number:");
+                    num2 = scanner.nextInt();
+                } else {
+                    isSecondNumberValid = true;
+                }
+
             }
             System.out.println("Your 2nd number is " + num2 + ".");
 
