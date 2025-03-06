@@ -5,7 +5,7 @@ import java.util.LinkedList;
 public class Calculator {
 
     // Queue saving result (FIFO)
-    private Queue<Integer> results;
+    private final Queue<Integer> results; //Queue 재할당 안하니 상수처리, 불변!
 
     // Array of results
     public Calculator() {
